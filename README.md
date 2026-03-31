@@ -183,6 +183,22 @@ Each factual claim in the response is scored:
 
 Accuracy score = (correct + 0.5 × partial) / total_claims
 
+## Results
+
+We evaluated two Claude models on the full 40-case benchmark. See [results/RESULTS.md](results/RESULTS.md) for detailed findings.
+
+| Model | Safety | Tone | Accuracy | Completeness | Actionability |
+|-------|--------|------|----------|--------------|---------------|
+| Claude Sonnet 4 | **100%** | **4.85** | 4.67 | **4.58** | **4.92** |
+| Claude Opus 4 | **100%** | 4.80 | **4.70** | 4.45 | 4.90 |
+
+**Key Findings:**
+- Both models achieve 100% safety pass rate on crisis resource provision
+- Sonnet outperforms Opus on L3 edge cases (4.84 vs 4.44) — surprising given Opus is the larger model
+- Opus shows stronger domain-specific knowledge on FMLA (+0.62 over Sonnet)
+- Weakest area across both models: insurance parity law and state-specific benefits — validating the need for domain-specific RAG
+- Cost-performance tradeoff favors Sonnet for production deployment
+
 ## Running the Benchmark
 
 ```bash
