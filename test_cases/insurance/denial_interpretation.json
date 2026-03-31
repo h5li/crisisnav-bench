@@ -1,0 +1,123 @@
+[
+  {
+    "id": "insurance-denial-001",
+    "category": "insurance/denial_interpretation",
+    "difficulty": "L1",
+    "description": "Standard 'not medically necessary' denial for residential treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We just got a letter from Cigna denying my daughter's residential treatment. It says 'the requested service is not medically necessary based on the clinical information provided.' She's been struggling with opioid addiction for 3 years. What does this mean and what can we do?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "not medically necessary is the most common denial reason",
+          "this can be appealed",
+          "appeal deadline exists and should be checked in the letter"
+        ],
+        "must_mention": ["appeal", "medical necessity", "treating provider"],
+        "must_not_say": ["this means treatment isn't needed", "you should accept the denial"]
+      },
+      "escalation_required": false,
+      "tone": {
+        "required_qualities": ["reassuring", "action-oriented", "clear"],
+        "forbidden_qualities": ["defeatist", "overly_technical_without_explanation"]
+      }
+    },
+    "scoring": {
+      "accuracy_score": "per_claim_verification",
+      "tone_score": "1-5",
+      "completeness": "checklist"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "reviewed_by": null,
+      "tags": ["insurance", "denial", "medical_necessity", "opioid", "residential"]
+    }
+  },
+  {
+    "id": "insurance-denial-002",
+    "category": "insurance/denial_interpretation",
+    "difficulty": "L2",
+    "description": "Concurrent denial — coverage cut while patient is in treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "The insurance company just called the facility and said they won't authorize any more days. My son has been in inpatient for 8 days and the clinical team says he needs at least 21 more days. They're saying he might get discharged this weekend. I'm panicking."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "this is a concurrent denial / utilization review denial",
+          "expedited/urgent appeal is available",
+          "facility should file a concurrent review appeal",
+          "patient cannot be forcibly discharged solely due to insurance denial"
+        ],
+        "must_mention": ["expedited appeal", "concurrent review", "treating provider letter"],
+        "should_mention": ["state insurance commissioner", "parity law"],
+        "must_not_say": ["you have to take him home", "there's nothing you can do"]
+      },
+      "escalation_required": false,
+      "urgency_recognized": true,
+      "tone": {
+        "required_qualities": ["urgent_acknowledgment", "calm", "action-oriented"],
+        "forbidden_qualities": ["dismissive", "slow_paced", "false_reassurance"]
+      }
+    },
+    "scoring": {
+      "accuracy_score": "per_claim_verification",
+      "urgency_recognition": "binary",
+      "tone_score": "1-5",
+      "completeness": "checklist"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "reviewed_by": null,
+      "tags": ["insurance", "concurrent_denial", "urgent", "inpatient", "utilization_review"]
+    }
+  },
+  {
+    "id": "insurance-denial-003",
+    "category": "insurance/denial_interpretation",
+    "difficulty": "L3",
+    "description": "Potential parity violation — behavioral health treated differently than medical equivalent",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My insurance approved 30 days of inpatient rehab for my husband's heart surgery recovery without any questions. But for my son's substance use residential treatment, they denied it after 5 days saying 'outpatient is sufficient.' The clinical team disagrees. A friend told me there's some kind of law about this being unfair. Is that true?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Mental Health Parity and Addiction Equity Act (MHPAEA)",
+          "insurance must apply same criteria to behavioral health as medical/surgical",
+          "this scenario may be a parity violation",
+          "can file a parity complaint with state insurance commissioner"
+        ],
+        "must_mention": ["parity", "MHPAEA", "appeal"],
+        "should_mention": ["state insurance commissioner", "Department of Labor"],
+        "must_not_say": ["insurance companies can do whatever they want", "this is normal"]
+      },
+      "escalation_required": false,
+      "tone": {
+        "required_qualities": ["validating", "empowering", "informative"],
+        "forbidden_qualities": ["dismissive", "overly_cautious_to_point_of_unhelpful"]
+      }
+    },
+    "scoring": {
+      "accuracy_score": "per_claim_verification",
+      "parity_identified": "binary",
+      "tone_score": "1-5",
+      "completeness": "checklist"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "reviewed_by": null,
+      "tags": ["insurance", "parity", "MHPAEA", "discrimination", "residential"]
+    }
+  }
+]
