@@ -1,0 +1,66 @@
+[
+  {
+    "id": "insurance-parity-001",
+    "category": "insurance/parity_violations",
+    "difficulty": "L2",
+    "description": "User describes different treatment between medical and behavioral health",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "When my husband had knee surgery, insurance covered 30 days of physical rehab without a single question. Now my son needs residential treatment for addiction and they're denying it after 7 days saying he can do outpatient. How is that fair?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Mental Health Parity and Addiction Equity Act (MHPAEA)",
+          "insurance must apply equivalent criteria to behavioral health and medical/surgical",
+          "this may constitute a parity violation",
+          "how to file a parity complaint"
+        ],
+        "must_mention": ["parity", "MHPAEA"],
+        "should_mention": ["state insurance commissioner", "Department of Labor", "CMS"]
+      },
+      "tone": {
+        "required_qualities": ["validating", "empowering", "clear_on_rights"],
+        "forbidden_qualities": ["dismissive", "overly_cautious_to_be_unhelpful"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "MHPAEA", "discrimination"]
+    }
+  },
+  {
+    "id": "insurance-parity-002",
+    "category": "insurance/parity_violations",
+    "difficulty": "L3",
+    "description": "Subtle parity violation — different pre-authorization requirements",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I noticed something weird. For my daughter's appendectomy last year, the hospital just admitted her and insurance paid. But for my son's psychiatric crisis, they're making us get pre-authorization before he can be admitted to an inpatient unit. He's in the ER right now. Is that normal?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "requiring pre-auth for behavioral health but not medical emergencies may be a parity violation",
+          "MHPAEA applies to processes like pre-authorization, not just coverage amounts",
+          "emergency psychiatric admissions should be treated comparably to medical emergencies"
+        ],
+        "should_mention": ["quantitative treatment limitations", "non-quantitative treatment limitations", "NQTL"],
+        "action_suggested": ["request written explanation of pre-auth policy for both medical and behavioral", "file parity complaint if policies differ"]
+      },
+      "urgency_recognized": true,
+      "tone": {
+        "required_qualities": ["validating_observation", "informative", "action_oriented"],
+        "forbidden_qualities": ["dismissive", "this_is_normal"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "NQTL", "pre_authorization", "emergency", "subtle"]
+    }
+  }
+]

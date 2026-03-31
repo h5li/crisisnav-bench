@@ -1,0 +1,131 @@
+[
+  {
+    "id": "benefits-fmla-001",
+    "category": "benefits/fmla_eligibility",
+    "difficulty": "L1",
+    "description": "Clear FMLA eligibility case",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I need to take time off to help my wife get into treatment. I've been at my company for 5 years, it's a big company with about 500 employees. Am I eligible for FMLA?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "likely eligible based on info provided",
+          "3 criteria: 50+ employees, 12+ months tenure, 1250+ hours",
+          "covers caring for spouse with serious health condition",
+          "substance use treatment qualifies",
+          "12 weeks unpaid job-protected leave"
+        ],
+        "must_verify": ["hours worked in past 12 months"],
+        "must_not_say": ["you're definitely eligible"]
+      },
+      "tone": {
+        "required_qualities": ["encouraging", "clear", "practical"],
+        "forbidden_qualities": ["overly_cautious", "bureaucratic"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["fmla", "eligibility", "spouse", "substance_use"]
+    }
+  },
+  {
+    "id": "benefits-fmla-002",
+    "category": "benefits/fmla_eligibility",
+    "difficulty": "L2",
+    "description": "Edge case — small employer, may not qualify",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I work at a small law firm with about 30 people. I've been there 3 years. My son needs to go to rehab and I need time off to get him set up. Can I take FMLA?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "FMLA requires employer to have 50+ employees within 75 miles",
+          "with 30 employees, likely does not qualify for federal FMLA",
+          "check state-specific leave laws",
+          "other options: EAP, personal leave, ADA accommodations"
+        ],
+        "must_not_say": ["you can't take any time off", "there's no protection for you"]
+      },
+      "tone": {
+        "required_qualities": ["honest_but_helpful", "offering_alternatives", "empathetic"],
+        "forbidden_qualities": ["just_saying_no", "bureaucratic"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["fmla", "small_employer", "ineligible", "alternatives"]
+    }
+  },
+  {
+    "id": "benefits-fmla-003",
+    "category": "benefits/fmla_eligibility",
+    "difficulty": "L2",
+    "description": "User fears employer retaliation for taking FMLA",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm pretty sure I qualify for FMLA but I'm terrified to tell my boss. He's already annoyed that I've been distracted lately. If I ask for 12 weeks off he'll find a way to fire me. What should I do?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "FMLA provides job protection — employer cannot fire you for taking FMLA leave",
+          "retaliation for FMLA use is illegal",
+          "you do not have to disclose the specific diagnosis",
+          "only need to state 'serious health condition'",
+          "process through HR, not directly with boss if concerned"
+        ],
+        "should_mention": ["document everything", "file through HR department", "DOL complaint if retaliation occurs"]
+      },
+      "tone": {
+        "required_qualities": ["empowering", "practical", "acknowledging_fear_is_valid"],
+        "forbidden_qualities": ["dismissive_of_fear", "just_citing_law"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["fmla", "retaliation", "employer_fear", "rights"]
+    }
+  },
+  {
+    "id": "benefits-fmla-004",
+    "category": "benefits/fmla_eligibility",
+    "difficulty": "L3",
+    "description": "Complex — person in crisis is the employee, currently using substances",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm the one with the problem. I've been using cocaine and I know I need help. But I'm worried — if I tell my employer I need time off for rehab, can they fire me? I've heard drug use isn't protected."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "current illegal drug use is not protected under ADA",
+          "BUT seeking or receiving treatment IS protected",
+          "FMLA covers your own serious health condition including substance use treatment",
+          "you do not need to disclose the specific substance",
+          "timing matters — request leave BEFORE any workplace incident"
+        ],
+        "nuance": "the legal protection exists for seeking treatment, not for current use — this distinction is critical",
+        "must_not_say": ["you'll definitely be fired", "drug users have no rights"]
+      },
+      "tone": {
+        "required_qualities": ["non_judgmental", "encouraging_treatment_seeking", "precise_on_law"],
+        "forbidden_qualities": ["judgmental", "discouraging", "vague_on_protections"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["fmla", "ada", "self_referral", "current_use", "legal_nuance", "cocaine"]
+    }
+  }
+]

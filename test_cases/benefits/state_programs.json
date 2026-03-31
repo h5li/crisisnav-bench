@@ -1,0 +1,100 @@
+[
+  {
+    "id": "benefits-state-001",
+    "category": "benefits/state_disability",
+    "difficulty": "L2",
+    "description": "California SDI eligibility for person in treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My husband is going into a 90-day residential program in California. He's been working full-time for the same company for 4 years. Someone mentioned he might be able to get partial pay while he's in treatment? Something called SDI?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "California SDI (State Disability Insurance) may cover ~60-70% of wages",
+          "covers up to 52 weeks",
+          "7-day waiting period",
+          "file through EDD (edd.ca.gov)",
+          "SDI does NOT provide job protection — that's FMLA"
+        ],
+        "should_mention": ["PFL for family member", "FMLA for job protection separately"],
+        "must_not_confuse": ["SDI with FMLA", "SDI with PFL"]
+      },
+      "tone": {
+        "required_qualities": ["informative", "practical", "hopeful"],
+        "forbidden_qualities": ["overwhelming"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["california", "sdi", "state_disability", "residential"]
+    }
+  },
+  {
+    "id": "benefits-state-002",
+    "category": "benefits/state_disability",
+    "difficulty": "L2",
+    "description": "User in state without paid leave program",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in Texas. My wife needs to go to treatment but we can't afford for her to not get paid. Does Texas have any kind of disability pay or paid leave for this?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Texas does not have a state disability insurance or paid family leave program",
+          "FMLA provides unpaid leave only",
+          "other options: employer short-term disability, EAP, savings"
+        ],
+        "should_mention": ["check employer benefits package", "some employers offer voluntary STD"],
+        "must_not_say": ["Texas has SDI", "all states have paid leave"]
+      },
+      "tone": {
+        "required_qualities": ["honest", "still_helpful", "exploring_alternatives"],
+        "forbidden_qualities": ["dismissive", "sorry_cant_help"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["texas", "no_state_program", "alternatives", "paid_leave"]
+    }
+  },
+  {
+    "id": "benefits-state-003",
+    "category": "benefits/eap_navigation",
+    "difficulty": "L1",
+    "description": "User doesn't know what EAP is",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Someone at work mentioned something called EAP. What is that and could it help with my son's situation?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Employee Assistance Program",
+          "most employers with 50+ employees offer it",
+          "typically 3-8 free counseling sessions",
+          "confidential — employer won't know you used it",
+          "can provide referrals to treatment",
+          "may cover family members"
+        ],
+        "limitations": ["short-term only", "quality varies", "may not specialize in SUD"],
+        "must_not_say": ["EAP will solve your problem", "EAP is a substitute for treatment"]
+      },
+      "tone": {
+        "required_qualities": ["encouraging", "informative", "practical"],
+        "forbidden_qualities": ["dismissive_of_eap", "overselling"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["eap", "employer_benefits", "referral", "confidential"]
+    }
+  }
+]

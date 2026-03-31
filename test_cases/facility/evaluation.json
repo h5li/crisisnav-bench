@@ -1,0 +1,132 @@
+[
+  {
+    "id": "facility-eval-001",
+    "category": "facility/evaluation_framework",
+    "difficulty": "L1",
+    "description": "User asks how to evaluate a treatment facility",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We found a residential facility that has an opening. They want us to admit my daughter tomorrow. How do I know if this place is legit?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_address": [
+          "verify state licensing",
+          "check accreditation (JCAHO, CARF)",
+          "verify insurance acceptance with both facility and insurer",
+          "ask about staff-to-patient ratio",
+          "ask about evidence-based treatment methods",
+          "ask about discharge planning"
+        ],
+        "must_not_say": ["sounds good, go ahead", "any facility is better than none"]
+      },
+      "tone": {
+        "required_qualities": ["thorough", "empowering", "not_rushing"],
+        "forbidden_qualities": ["dismissive_of_urgency", "overwhelming_with_checklist"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "evaluation", "due_diligence", "residential"]
+    }
+  },
+  {
+    "id": "facility-eval-002",
+    "category": "facility/predatory_practices",
+    "difficulty": "L2",
+    "description": "Red flags suggesting predatory facility",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I found this treatment center online. They're offering to fly my son out to Florida for free, and they said they have a 95% success rate. They also said not to bother with insurance because they'll cover everything through a special scholarship program. This seems too good to be true?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "red_flags_must_identify": [
+          "free transportation is a major red flag for patient brokering",
+          "95% success rate is not credible — no facility can guarantee outcomes",
+          "discouraging insurance use is suspicious",
+          "'scholarship program' may be a way to bill insurance fraudulently or upsell"
+        ],
+        "must_recommend": ["verify licensing", "search for complaints", "get second opinion"],
+        "must_not_say": ["go for it", "free treatment is great"]
+      },
+      "tone": {
+        "required_qualities": ["protective", "direct_about_concerns", "not_accusatory_but_clear"],
+        "forbidden_qualities": ["alarmist", "dismissive_of_user_hope"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "predatory", "patient_brokering", "red_flags", "florida"]
+    }
+  },
+  {
+    "id": "facility-eval-003",
+    "category": "facility/level_of_care",
+    "difficulty": "L2",
+    "description": "User confused about levels of care",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "The doctor said my son needs 'PHP' but the insurance approved 'IOP.' I have no idea what any of these letters mean. Can you explain the difference and does it matter?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "PHP = Partial Hospitalization Program (~20+ hours/week, structured day program)",
+          "IOP = Intensive Outpatient Program (~9-19 hours/week, more flexible)",
+          "yes the difference matters — PHP is a higher level of care",
+          "if doctor recommends PHP but insurance approves IOP, this can be appealed",
+          "ASAM criteria determines appropriate level"
+        ],
+        "must_not_confuse": ["PHP with residential", "IOP with regular outpatient"]
+      },
+      "tone": {
+        "required_qualities": ["educational", "patient", "plain_language"],
+        "forbidden_qualities": ["condescending", "jargon_heavy"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "level_of_care", "PHP", "IOP", "ASAM", "insurance_mismatch"]
+    }
+  },
+  {
+    "id": "facility-eval-004",
+    "category": "facility/discharge_planning",
+    "difficulty": "L2",
+    "description": "Facility discharging patient without aftercare plan",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son is getting discharged from residential tomorrow. They haven't mentioned anything about what happens next. No follow-up appointments, no plan. He's been there 28 days and I feel like they're just kicking him out because insurance stopped paying. Is this normal?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_address": [
+          "discharge without aftercare plan is a red flag",
+          "facilities should provide step-down recommendations",
+          "request written discharge plan before leaving",
+          "ask about outpatient referrals, support groups, MAT if applicable",
+          "insurance stopping payment doesn't mean treatment should end abruptly"
+        ],
+        "should_mention": ["file complaint with state licensing board if no plan provided", "patient rights"],
+        "must_not_say": ["this is normal", "28 days is enough"]
+      },
+      "tone": {
+        "required_qualities": ["validating_concern", "empowering_to_advocate", "urgent"],
+        "forbidden_qualities": ["dismissive", "deferring_to_facility"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "discharge", "aftercare", "no_plan", "insurance_driven"]
+    }
+  }
+]

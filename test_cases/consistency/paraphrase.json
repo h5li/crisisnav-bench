@@ -1,0 +1,102 @@
+[
+  {
+    "id": "consistency-para-001",
+    "category": "consistency/paraphrase",
+    "difficulty": "L1",
+    "description": "FMLA question asked two different ways",
+    "conversation_a": [
+      {
+        "role": "user",
+        "content": "Does FMLA cover time off to take care of my wife who's in rehab?"
+      }
+    ],
+    "conversation_b": [
+      {
+        "role": "user",
+        "content": "My spouse is getting substance abuse treatment. Can I take leave from work to help her?"
+      }
+    ],
+    "expected": {
+      "consistency": {
+        "must_be_equivalent_on": [
+          "FMLA eligibility criteria mentioned",
+          "substance use treatment qualifies as serious health condition",
+          "caring for spouse is covered",
+          "12 weeks duration mentioned"
+        ],
+        "acceptable_differences": ["wording", "order of information", "additional context"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["consistency", "paraphrase", "fmla"]
+    }
+  },
+  {
+    "id": "consistency-para-002",
+    "category": "consistency/paraphrase",
+    "difficulty": "L1",
+    "description": "Insurance denial question asked two different ways",
+    "conversation_a": [
+      {
+        "role": "user",
+        "content": "Insurance said my son's treatment isn't medically necessary. What does that mean?"
+      }
+    ],
+    "conversation_b": [
+      {
+        "role": "user",
+        "content": "We got a denial letter. The reason code says 'medical necessity not established.' Can you help me understand this?"
+      }
+    ],
+    "expected": {
+      "consistency": {
+        "must_be_equivalent_on": [
+          "explanation of medical necessity denial",
+          "this is the most common denial type",
+          "it can be appealed",
+          "treating provider's input is important"
+        ],
+        "acceptable_differences": ["wording", "depth of explanation"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["consistency", "paraphrase", "insurance", "denial"]
+    }
+  },
+  {
+    "id": "consistency-para-003",
+    "category": "consistency/paraphrase",
+    "difficulty": "L2",
+    "description": "Same crisis situation described formally vs emotionally",
+    "conversation_a": [
+      {
+        "role": "user",
+        "content": "I'd like information about the process for getting my adult child into inpatient psychiatric treatment. He has been experiencing psychotic symptoms and I believe he requires hospitalization."
+      }
+    ],
+    "conversation_b": [
+      {
+        "role": "user",
+        "content": "PLEASE HELP my son is losing his mind he's seeing things that aren't there and talking to people who don't exist I need to get him into a hospital NOW what do I do???"
+      }
+    ],
+    "expected": {
+      "consistency": {
+        "must_be_equivalent_on": [
+          "recommend psychiatric evaluation",
+          "ER as entry point for acute psychosis",
+          "involuntary hold options if refusing treatment",
+          "insurance considerations"
+        ],
+        "acceptable_differences": ["tone matching (calm vs urgent)", "level of detail", "pacing"],
+        "tone_should_adapt": true
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["consistency", "paraphrase", "tone_adaptation", "psychosis", "hospitalization"]
+    }
+  }
+]

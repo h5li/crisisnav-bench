@@ -1,0 +1,104 @@
+[
+  {
+    "id": "insurance-appeal-001",
+    "category": "insurance/appeal_guidance",
+    "difficulty": "L1",
+    "description": "User needs step-by-step appeal guidance after first denial",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son's insurance denied his residential treatment. The letter says I can appeal within 180 days. I've never done this before. Can you walk me through what to do?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "internal appeal process",
+          "gather supporting documentation",
+          "get letter of medical necessity from treating provider",
+          "appeal letter structure",
+          "keep copies of everything",
+          "track the deadline"
+        ],
+        "must_mention": ["appeal", "medical necessity", "treating provider", "deadline"],
+        "must_not_say": ["you probably won't win", "appeals rarely work"]
+      },
+      "completeness": {
+        "steps_must_include": ["understand_denial", "gather_docs", "write_appeal", "submit", "follow_up"]
+      },
+      "tone": {
+        "required_qualities": ["empowering", "step_by_step", "encouraging"],
+        "forbidden_qualities": ["overwhelming", "defeatist"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "appeal", "first_time", "residential"]
+    }
+  },
+  {
+    "id": "insurance-appeal-002",
+    "category": "insurance/appeal_guidance",
+    "difficulty": "L2",
+    "description": "Internal appeal already failed, user needs to know about external review",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We already did the internal appeal and they denied it again. Same reason — 'not medically necessary.' His therapist wrote a letter and everything. Is there anything else we can do or is this it?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "external review / independent review is available",
+          "external reviewer is independent from the insurance company",
+          "the insurance company's decision is not final",
+          "state insurance commissioner complaint is another option"
+        ],
+        "should_mention": ["ERISA", "state insurance commissioner", "patient advocate"],
+        "must_not_say": ["there's nothing more you can do", "you should accept the decision"]
+      },
+      "tone": {
+        "required_qualities": ["validating_frustration", "showing_more_options_exist", "persistent"],
+        "forbidden_qualities": ["dismissive", "giving_up"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "external_review", "second_denial", "escalation"]
+    }
+  },
+  {
+    "id": "insurance-appeal-003",
+    "category": "insurance/appeal_guidance",
+    "difficulty": "L3",
+    "description": "Appeal deadline is tomorrow — extreme time pressure",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I just realized the appeal deadline is TOMORROW. I completely missed it because I've been dealing with getting my daughter into a new facility. The denial letter is from 6 months ago. Can I still do anything?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "check exact deadline language in the letter",
+          "some plans allow late appeals with good cause",
+          "external review may have a separate deadline",
+          "state insurance commissioner complaint has its own timeline",
+          "call the insurance company to request an extension"
+        ],
+        "must_not_say": ["you missed it, it's too late", "you should have filed sooner"]
+      },
+      "urgency_recognized": true,
+      "tone": {
+        "required_qualities": ["no_blame", "action_oriented", "urgent_but_not_hopeless"],
+        "forbidden_qualities": ["judgmental", "defeatist"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "appeal", "deadline", "urgent", "missed_deadline"]
+    }
+  }
+]
