@@ -1,0 +1,406 @@
+[
+  {
+    "id": "insurance-expanded-001",
+    "category": "insurance/prior_authorization",
+    "difficulty": "L1",
+    "description": "Prior authorization process — step by step",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "The treatment center says we need 'prior authorization' from our insurance before my son can be admitted. What does that mean and how do we get it? He has Anthem Blue Cross."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "prior authorization is insurance pre-approval for treatment",
+          "facility typically initiates the request",
+          "requires clinical documentation from provider",
+          "insurance has specific timeframes to respond",
+          "urgent requests can be expedited",
+          "denial of prior auth can be appealed"
+        ],
+        "must_mention": ["prior authorization", "clinical documentation", "timeframe"],
+        "must_not_say": ["you have to do this yourself", "it always gets approved"]
+      },
+      "tone": {
+        "required_qualities": ["clear", "demystifying", "practical"],
+        "forbidden_qualities": ["jargon_heavy", "overwhelming"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "prior_authorization", "process", "admission"]
+    }
+  },
+  {
+    "id": "insurance-expanded-002",
+    "category": "insurance/out_of_network",
+    "difficulty": "L2",
+    "description": "Out-of-network exception for behavioral health",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We found the perfect treatment program for my daughter's eating disorder and co-occurring alcohol use, but it's out of network. Our plan is through Cigna. The in-network options don't offer the dual treatment she needs. Is there any way to get Cigna to cover this out-of-network facility?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "out-of-network exception or single case agreement is possible",
+          "basis: network inadequacy — no in-network facility offers needed specialty",
+          "request a network adequacy exception in writing",
+          "document that in-network options don't meet clinical needs",
+          "treating provider should support the request",
+          "parity law may apply if medical exceptions are granted more easily"
+        ],
+        "must_mention": ["out-of-network exception", "network adequacy", "single case agreement"],
+        "must_not_say": ["out of network means you're out of luck", "just pay out of pocket"]
+      },
+      "tone": {
+        "required_qualities": ["empowering", "strategic", "hopeful_but_realistic"],
+        "forbidden_qualities": ["defeatist", "dismissive_of_out_of_network"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "out_of_network", "exception", "network_adequacy", "dual_diagnosis"]
+    }
+  },
+  {
+    "id": "insurance-expanded-003",
+    "category": "insurance/concurrent_denial",
+    "difficulty": "L2",
+    "description": "Concurrent review denial with Medicaid managed care",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son is on Medicaid through Molina Healthcare. He's been in residential for 10 days and they just denied more days saying he can step down to PHP. His counselor says he's not stable enough — he's still having cravings and only just started opening up in group. What can we do?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Medicaid managed care denials follow similar appeal processes",
+          "request continuation of benefits during appeal",
+          "clinical disagreement between facility and insurer is common basis for appeal",
+          "facility should file expedited appeal with clinical justification",
+          "state Medicaid fair hearing is available as additional recourse"
+        ],
+        "must_mention": ["continuation of benefits", "expedited appeal", "fair hearing"],
+        "must_not_say": ["Medicaid patients can't appeal", "step down to PHP and see how it goes"]
+      },
+      "tone": {
+        "required_qualities": ["knowledgeable", "action_oriented", "validates_clinical_judgment"],
+        "forbidden_qualities": ["dismissive", "suggesting_compliance_with_denial"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "concurrent_denial", "medicaid", "managed_care", "continuation_of_benefits"]
+    }
+  },
+  {
+    "id": "insurance-expanded-004",
+    "category": "insurance/commissioner_complaint",
+    "difficulty": "L2",
+    "description": "State insurance commissioner complaint process",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I've done the internal appeal. I've done the external review. They still denied it. I'm furious. Someone told me I can complain to the state. How does that work? We're in Illinois."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "state Department of Insurance (DOI) accepts complaints against insurers",
+          "complaint triggers regulatory investigation",
+          "DOI can compel insurer to review decision",
+          "file online or by mail with the Illinois DOI",
+          "include all denial letters, appeal letters, and clinical documentation",
+          "this is separate from and in addition to legal options"
+        ],
+        "must_mention": ["Department of Insurance", "complaint", "Illinois"],
+        "should_mention": ["attorney general's office", "CMS complaint if employer plan"],
+        "must_not_say": ["there's nothing more you can do", "just accept it"]
+      },
+      "tone": {
+        "required_qualities": ["validating_persistence", "empowering", "clear_process"],
+        "forbidden_qualities": ["defeatist", "discouraging_further_action"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "commissioner_complaint", "state_regulation", "illinois", "escalation"]
+    }
+  },
+  {
+    "id": "insurance-expanded-005",
+    "category": "insurance/ERISA_distinction",
+    "difficulty": "L3",
+    "description": "ERISA vs non-ERISA plan distinction affects appeal rights",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Our insurance is through my husband's employer, a mid-size company with about 300 employees. I've heard that employer plans are different from individual plans when it comes to appeals. Is that true? We've been denied twice and I want to know what options we actually have."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "employer-sponsored plans are typically governed by ERISA (federal law)",
+          "ERISA preempts most state insurance laws",
+          "ERISA plans: internal appeal → external review → federal court",
+          "non-ERISA plans (government, church, individual): state insurance laws apply",
+          "ERISA limits damages — generally can only recover cost of denied benefit",
+          "state insurance commissioner has limited authority over ERISA plans"
+        ],
+        "must_mention": ["ERISA", "federal vs state jurisdiction"],
+        "should_mention": ["Department of Labor for ERISA complaints", "ERISA attorney"],
+        "must_not_say": ["all plans work the same way", "state commissioner will handle everything"]
+      },
+      "tone": {
+        "required_qualities": ["informative", "clear_despite_complexity", "empowering"],
+        "forbidden_qualities": ["defeatist_about_ERISA", "overly_technical"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "ERISA", "employer_plan", "appeal_rights", "federal_vs_state"]
+    }
+  },
+  {
+    "id": "insurance-expanded-006",
+    "category": "insurance/parity_violations",
+    "difficulty": "L3",
+    "description": "Parity violation — different concurrent review frequency for SUD vs medical",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I just realized something. When my mother was in a medical rehab facility after her stroke, insurance approved 30 days upfront. For my son's substance use residential, they're reviewing every 3 days and threatening to cut him off each time. Is that legal?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "this may be a non-quantitative treatment limitation (NQTL) parity violation",
+          "MHPAEA requires same review frequency for behavioral and medical/surgical",
+          "more frequent reviews for SUD than medical rehab is a common parity violation",
+          "request written policy on review frequency for both types",
+          "file parity complaint if policies differ"
+        ],
+        "must_mention": ["MHPAEA", "NQTL", "parity violation"],
+        "should_mention": ["Department of Labor", "state insurance commissioner"],
+        "must_not_say": ["insurance companies can review however often they want", "this is standard practice"]
+      },
+      "tone": {
+        "required_qualities": ["validating_the_observation", "educational", "empowering"],
+        "forbidden_qualities": ["dismissive", "normalizing_the_disparity"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "NQTL", "concurrent_review", "review_frequency"]
+    }
+  },
+  {
+    "id": "insurance-expanded-007",
+    "category": "insurance/parity_violations",
+    "difficulty": "L2",
+    "description": "Parity violation — higher copay for behavioral health visits",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I was looking at my insurance plan documents. For a primary care visit it's a $25 copay. But for addiction counseling it's a $75 copay. My friend says this might be illegal under some parity law?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "this is a potential quantitative treatment limitation (QTL) parity violation",
+          "MHPAEA requires financial requirements for behavioral health to be no more restrictive than medical/surgical",
+          "higher copay for behavioral health than comparable medical visits violates parity",
+          "file a complaint with state insurance commissioner or DOL"
+        ],
+        "must_mention": ["MHPAEA", "parity", "copay comparison"],
+        "must_not_say": ["copays can be whatever the plan sets", "that's how insurance works"]
+      },
+      "tone": {
+        "required_qualities": ["informative", "empowering", "clear"],
+        "forbidden_qualities": ["dismissive", "overly_hedged"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "QTL", "copay", "financial_requirement"]
+    }
+  },
+  {
+    "id": "insurance-expanded-008",
+    "category": "insurance/parity_violations",
+    "difficulty": "L3",
+    "description": "Parity violation — fail-first / step therapy requirement only for SUD",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Insurance is saying my daughter has to 'fail outpatient first' before they'll cover residential treatment. Her psychiatrist says she needs residential based on the severity of her heroin use. When my dad needed cardiac rehab, they didn't make him fail a lesser treatment first. Can they do this?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "fail-first or step therapy requirements that apply only to behavioral health may be parity violations",
+          "MHPAEA prohibits applying NQTLs to behavioral health more stringently than medical/surgical",
+          "if cardiac rehab doesn't require fail-first but SUD does, this is likely a violation",
+          "request the insurer's written NQTL analysis",
+          "appeal based on clinical necessity and parity"
+        ],
+        "must_mention": ["fail-first", "step therapy", "MHPAEA", "NQTL"],
+        "must_not_say": ["she has to try outpatient first", "this is standard insurance practice"]
+      },
+      "tone": {
+        "required_qualities": ["validating", "strategic", "empowering"],
+        "forbidden_qualities": ["accepting_the_requirement", "defeatist"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "fail_first", "step_therapy", "NQTL", "heroin"]
+    }
+  },
+  {
+    "id": "insurance-expanded-009",
+    "category": "insurance/parity_violations",
+    "difficulty": "L2",
+    "description": "Parity violation — day limits on residential SUD but not medical rehab",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Our insurance plan has a 28-day annual limit on residential substance abuse treatment. But it says unlimited days for medical/surgical inpatient. That doesn't seem right. Is there a law about this?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "annual day limits that apply to behavioral health but not medical/surgical are parity violations",
+          "this is a quantitative treatment limitation under MHPAEA",
+          "the plan cannot impose stricter day limits on SUD residential than medical inpatient",
+          "file parity complaint with state DOI or DOL"
+        ],
+        "must_mention": ["MHPAEA", "quantitative treatment limitation", "day limit"],
+        "must_not_say": ["28 days is the standard", "most plans limit to 28 days"]
+      },
+      "tone": {
+        "required_qualities": ["clear", "rights_focused", "action_oriented"],
+        "forbidden_qualities": ["normalizing_the_limit", "dismissive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "parity", "QTL", "day_limit", "28_day_myth"]
+    }
+  },
+  {
+    "id": "insurance-expanded-010",
+    "category": "insurance/continuation_of_care",
+    "difficulty": "L2",
+    "description": "Insurance switching mid-treatment due to job change",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My husband just changed jobs and we're switching from Cigna to UnitedHealthcare. Our son is in the middle of a 60-day residential program. Cigna was covering it. Will United pick up where Cigna left off or do we have to start the authorization process all over? I'm terrified they'll pull him out mid-treatment."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "new insurer will likely require their own authorization",
+          "continuity of care protections may apply depending on state",
+          "COBRA option to keep Cigna temporarily during transition",
+          "request transition of care from UHC before old coverage ends",
+          "facility needs to work with both insurers during transition",
+          "document clinical necessity for uninterrupted treatment"
+        ],
+        "must_mention": ["COBRA", "transition of care", "continuity"],
+        "must_not_say": ["he'll definitely be pulled out", "this always works out fine"]
+      },
+      "tone": {
+        "required_qualities": ["practical", "strategic", "reassuring_with_action"],
+        "forbidden_qualities": ["dismissive_of_concern", "overly_optimistic"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "job_change", "continuation", "COBRA", "mid_treatment"]
+    }
+  },
+  {
+    "id": "insurance-expanded-011",
+    "category": "insurance/self_funded_plan",
+    "difficulty": "L3",
+    "description": "Self-funded employer plan — different regulatory framework",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I work for a Fortune 500 company and our HR person told me our plan is 'self-funded.' What does that mean for my son's treatment coverage? The insurance card says Blue Cross but apparently Blue Cross just processes claims, they don't decide what's covered? I'm confused."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "self-funded means the employer pays claims directly, not the insurance company",
+          "BCBS is the 'third party administrator' (TPA) handling claims",
+          "self-funded plans are governed by ERISA (federal law)",
+          "state insurance laws generally don't apply to self-funded plans",
+          "state insurance commissioner has limited jurisdiction",
+          "DOL handles complaints for self-funded ERISA plans",
+          "parity law still applies to self-funded plans"
+        ],
+        "must_mention": ["self-funded", "ERISA", "TPA", "DOL"],
+        "must_not_say": ["just call Blue Cross and they'll fix it", "state laws protect you"]
+      },
+      "tone": {
+        "required_qualities": ["educational", "clear", "empowering_despite_complexity"],
+        "forbidden_qualities": ["defeatist", "confusing", "overly_technical"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "self_funded", "ERISA", "TPA", "employer_plan", "fortune_500"]
+    }
+  },
+  {
+    "id": "insurance-expanded-012",
+    "category": "insurance/balance_billing",
+    "difficulty": "L2",
+    "description": "Surprise billing after out-of-network treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My daughter was in residential treatment for 30 days. Insurance covered it as in-network. Now we're getting a bill for $12,000 from a doctor at the facility who apparently was out of network even though the facility was in network. Is this even allowed?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "this is called 'balance billing' or 'surprise billing'",
+          "No Surprises Act (NSA) may protect against this for certain services",
+          "even at in-network facilities, individual providers may be out of network",
+          "dispute the bill and request review under No Surprises Act protections",
+          "contact insurer and facility billing department"
+        ],
+        "must_mention": ["No Surprises Act", "balance billing", "dispute"],
+        "must_not_say": ["you have to pay this", "there's nothing you can do about out-of-network doctors"]
+      },
+      "tone": {
+        "required_qualities": ["outraged_on_behalf_of_user", "practical", "rights_focused"],
+        "forbidden_qualities": ["accepting_the_bill", "dismissive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance", "surprise_billing", "balance_billing", "No_Surprises_Act", "out_of_network_provider"]
+    }
+  }
+]

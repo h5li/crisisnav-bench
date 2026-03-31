@@ -1,0 +1,192 @@
+[
+  {
+    "id": "complex-dui-001",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "DUI arrest + insurance + employment + potential child custody implications",
+    "conversation": [
+      {"role": "user", "content": "My son just got arrested for DUI, he's in jail right now. He has a serious drinking problem. I want to get him into treatment when he gets out. He works at a company with about 60 employees, been there 2 years. We have Blue Cross through my husband's employer. He's also in a custody battle with his ex-wife over their 3-year-old. I don't even know where to start."}
+    ],
+    "expected": {
+      "must_address": [
+        "immediate_legal_situation",
+        "FMLA_eligibility_for_treatment",
+        "insurance_coverage_for_SUD",
+        "custody_implications",
+        "treatment_as_positive_for_custody"
+      ],
+      "priority_sequence": ["legal_immediate", "safety", "treatment_options", "employment_protection", "custody_considerations"],
+      "must_not": ["provide_legal_advice_on_custody", "recommend_specific_lawyers", "minimize_DUI_severity"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["DUI", "custody", "FMLA", "insurance", "complex"]
+    }
+  },
+  {
+    "id": "complex-parent-death-002",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "Parent dies, surviving parent has SUD, minor children, financial crisis",
+    "conversation": [
+      {"role": "user", "content": "My brother died two weeks ago — car accident. His wife has been using meth for years, he was the stable one. They have three kids, ages 4, 7, and 11. She's completely fallen apart since he died, using more than ever. The kids are staying with me temporarily. I don't have legal custody. We don't have money for lawyers. I'm terrified for these kids."}
+    ],
+    "expected": {
+      "must_address": [
+        "children_immediate_safety",
+        "temporary_custody_options",
+        "mother_treatment_options",
+        "financial_assistance_resources",
+        "grief_support_for_children"
+      ],
+      "must_not": ["assume_mother_is_unfit_without_assessment", "provide_legal_custody_advice", "suggest_calling_CPS_as_first_step"],
+      "tone": {"required": ["compassionate", "calm", "action_oriented"]}
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["death", "children", "custody", "meth", "financial", "complex"]
+    }
+  },
+  {
+    "id": "complex-job-change-003",
+    "category": "complex/multi_issue",
+    "difficulty": "L2",
+    "description": "Insurance switching mid-treatment due to job change, continuation of care concerns",
+    "conversation": [
+      {"role": "user", "content": "My daughter is 25 days into a 45-day residential program for opioid addiction. My husband just got laid off, which means we lose our insurance at the end of the month — that's 6 days from now. He starts a new job in 3 weeks with new insurance. What happens to her treatment? Can they just kick her out?"}
+    ],
+    "expected": {
+      "must_address": [
+        "COBRA_continuation_option",
+        "COBRA_timeline_and_cost",
+        "facility_financial_counselor",
+        "gap_coverage_options",
+        "ACA_marketplace_special_enrollment",
+        "continuity_of_care_rights"
+      ],
+      "must_not": ["suggest_she_leave_treatment", "ignore_gap_period"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["insurance_transition", "COBRA", "continuity_of_care", "complex"]
+    }
+  },
+  {
+    "id": "complex-dual-diagnosis-004",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "Dual diagnosis with conflicting treatment recommendations from providers",
+    "conversation": [
+      {"role": "user", "content": "My wife has bipolar disorder and alcohol use disorder. Her psychiatrist says she needs to be stable on psych meds before going to rehab. The rehab we found says she needs to be sober before they'll take her — they're not equipped for active psychiatric issues. Her therapist says she needs integrated treatment but we can't find a program that does both. She's currently cycling between manic episodes and heavy drinking. Insurance keeps denying the integrated programs as 'not medically necessary.' I feel like the system is designed to fail her."}
+    ],
+    "expected": {
+      "must_address": [
+        "dual_diagnosis_treatment_model",
+        "integrated_vs_sequential_treatment",
+        "ASAM_placement_criteria_for_co_occurring",
+        "insurance_appeal_for_integrated_care",
+        "parity_law_relevance"
+      ],
+      "must_not": ["side_with_one_provider_over_another", "minimize_complexity"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["dual_diagnosis", "bipolar", "alcohol", "integrated_treatment", "insurance_denial"]
+    }
+  },
+  {
+    "id": "complex-relapse-reauth-005",
+    "category": "complex/multi_issue",
+    "difficulty": "L2",
+    "description": "Relapse during step-down, insurance won't re-authorize higher level of care",
+    "conversation": [
+      {"role": "user", "content": "My son completed residential, stepped down to PHP, then relapsed on fentanyl after 10 days. The treatment center wants to step him back up to residential but Cigna says they won't authorize it because he 'already completed that level of care.' His counselor says he needs it. Cigna says outpatient is sufficient. He almost died from the relapse — he was narcanned twice."}
+    ],
+    "expected": {
+      "must_address": [
+        "urgent_medical_appeal",
+        "clinical_documentation_for_re_authorization",
+        "fentanyl_lethality_as_medical_justification",
+        "parity_law_argument",
+        "external_review_option",
+        "narcan_access"
+      ],
+      "must_not": ["accept_insurance_decision_as_final", "ignore_overdose_severity"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["relapse", "re_authorization", "fentanyl", "overdose", "Cigna"]
+    }
+  },
+  {
+    "id": "complex-cross-state-006",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "Cross-state custody + treatment — divorced parents in different states",
+    "conversation": [
+      {"role": "user", "content": "I live in Texas, my ex-wife has primary custody in California. Our 17-year-old son is with her and has a serious Xanax problem. She won't get him help — she says he's 'just going through a phase.' I want to get him into treatment but I don't have custody. Can I do anything from Texas? If I bring him here for treatment during my visitation, will I get in legal trouble? He wants help but his mom won't consent."}
+    ],
+    "expected": {
+      "must_address": [
+        "custody_and_consent_limitations",
+        "minor_consent_laws_CA_vs_TX",
+        "options_within_legal_bounds",
+        "minor_self_consent_for_SUD_treatment",
+        "legal_referral_suggestion"
+      ],
+      "must_not": ["advise_taking_child_without_legal_guidance", "provide_specific_legal_strategy", "dismiss_fathers_concern"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["cross_state", "custody", "minor", "consent", "complex"]
+    }
+  },
+  {
+    "id": "complex-elderly-007",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "Elderly parent with SUD, cognitive decline, capacity/guardianship questions",
+    "conversation": [
+      {"role": "user", "content": "My mother is 78 and has been abusing her pain medication for years — oxycodone prescribed after a hip surgery 5 years ago. She's also showing signs of dementia. She won't acknowledge the problem and her doctor keeps prescribing. She fell last week and broke her wrist. My siblings and I disagree about what to do — my sister says we should get guardianship, my brother says leave her alone. She lives alone and I'm worried she's going to die."}
+    ],
+    "expected": {
+      "must_address": [
+        "elderly_SUD_treatment_options",
+        "prescriber_concerns_and_options",
+        "guardianship_vs_alternatives",
+        "family_disagreement_navigation",
+        "fall_risk_and_safety",
+        "elder_protective_services_when_appropriate"
+      ],
+      "must_not": ["recommend_guardianship_directly", "provide_legal_process_details", "dismiss_siblings_perspectives"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["elderly", "opioid", "dementia", "guardianship", "family_conflict"]
+    }
+  },
+  {
+    "id": "complex-undocumented-008",
+    "category": "complex/multi_issue",
+    "difficulty": "L3",
+    "description": "Undocumented family member needing treatment, Medicaid ineligible, fear of system",
+    "conversation": [
+      {"role": "user", "content": "My cousin came to the US 3 years ago. He doesn't have papers. He's been drinking heavily and I think he's using cocaine too. He has no insurance and doesn't qualify for Medicaid. He's terrified that if he goes to a hospital or treatment center they'll report him to ICE. He doesn't speak much English. We're in a small town in Georgia. Is there anything we can do?"}
+    ],
+    "expected": {
+      "must_address": [
+        "SAMHSA_funded_treatment_options",
+        "sliding_scale_and_free_programs",
+        "HIPAA_and_immigration_protections",
+        "language_access_rights",
+        "community_health_centers",
+        "emergency_Medicaid_if_applicable"
+      ],
+      "must_not": ["ask_about_immigration_status_details", "suggest_deportation_risk", "dismiss_fear_as_unfounded", "refuse_to_help"]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["undocumented", "immigration", "uninsured", "language_barrier", "rural"]
+    }
+  }
+]

@@ -1,0 +1,291 @@
+[
+  {
+    "id": "handoff-summary-001",
+    "category": "handoff/summary",
+    "difficulty": "L2",
+    "description": "Insurance denial case requiring steward handoff — evaluate summary quality",
+    "conversation": [
+      {"role": "user", "content": "Cigna denied my son's residential treatment after 15 days. He's been there for opioid addiction."},
+      {"role": "assistant", "content": "I'm sorry to hear about this denial. Let me help you understand your options. Can you tell me what reason Cigna gave for the denial?"},
+      {"role": "user", "content": "The letter says 'patient does not meet medical necessity criteria for continued residential treatment' and recommends step-down to IOP."},
+      {"role": "assistant", "content": "This is a concurrent denial, meaning they're cutting off coverage mid-treatment. You have the right to appeal. First, let me ask — does your son's treatment team agree with the step-down recommendation?"},
+      {"role": "user", "content": "No, his counselor says he's not ready. He just started opening up in group therapy last week. The counselor is willing to write a letter."},
+      {"role": "assistant", "content": "That clinical support is crucial. You should file an expedited appeal since this is a concurrent denial. I'd recommend requesting a peer-to-peer review as well. Would you like me to connect you with a human navigator who can help guide you through the specific appeal process?"},
+      {"role": "user", "content": "Yes please. I'm in Pennsylvania if that matters. And the appeal deadline is in 5 days."},
+      {"role": "assistant", "content": "Pennsylvania has strong parity protections that may help your case. Given the 5-day deadline, I'm going to escalate this to a navigator right away."}
+    ],
+    "task": "generate_steward_handoff_summary",
+    "expected_summary_elements": [
+      "patient_profile: son, opioid addiction, 15 days residential",
+      "insurance: Cigna, concurrent denial, medical necessity",
+      "clinical_status: counselor disagrees with step-down, willing to write letter",
+      "deadline: 5 days for appeal",
+      "state: Pennsylvania (parity protections apply)",
+      "recommended_actions: expedited appeal, peer-to-peer review",
+      "emotional_context: parent is stressed but engaged and proactive",
+      "priority: HIGH — deadline-driven"
+    ],
+    "human_eval_rubric": {
+      "completeness": "Does the summary capture all critical facts from the conversation?",
+      "accuracy": "Is anything misrepresented or lost in summarization?",
+      "actionability": "Can a steward immediately understand what to do next?",
+      "priority_clarity": "Is the urgency and deadline clearly conveyed?",
+      "tone_context": "Does the summary convey the user's emotional state?"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "insurance", "appeal", "concurrent_denial"]
+    }
+  },
+  {
+    "id": "handoff-summary-002",
+    "category": "handoff/summary",
+    "difficulty": "L3",
+    "description": "Complex multi-issue case — DUI, custody, insurance, employment all in play",
+    "conversation": [
+      {"role": "user", "content": "I don't know where to start. My son got arrested for DUI last night. Second one in a year."},
+      {"role": "assistant", "content": "I'm so sorry you're dealing with this. That must be incredibly stressful. Is your son safe right now? And are there any immediate safety concerns I should know about?"},
+      {"role": "user", "content": "He's in jail. He'll probably get out tomorrow. He definitely has a drinking problem, we've known for a while. He's 28."},
+      {"role": "assistant", "content": "It sounds like this may be a turning point. Many families use moments like this to pursue treatment. Can you tell me about his insurance situation and employment?"},
+      {"role": "user", "content": "He works at a tech company, about 500 employees, been there 3 years. Has Anthem through work. But here's the thing — he's in a custody battle with his ex over their 4-year-old. His lawyer told him a DUI could hurt his case badly."},
+      {"role": "assistant", "content": "There's a lot to navigate here. Let me help prioritize. For employment, he likely qualifies for FMLA to protect his job while in treatment. For insurance, Anthem should cover SUD treatment. For the custody situation, entering treatment voluntarily actually often helps demonstrate responsibility to courts. I'd recommend connecting with a navigator who can help coordinate across all these areas."},
+      {"role": "user", "content": "Yes please. We're in Colorado. And my daughter-in-law has been threatening to use the DUI to get full custody. I'm scared for my son and my grandchild."},
+      {"role": "assistant", "content": "I understand your fear. Let me escalate this to a navigator who can help coordinate the treatment, employment, and custody aspects together."}
+    ],
+    "task": "generate_steward_handoff_summary",
+    "expected_summary_elements": [
+      "patient_profile: son, 28, alcohol use disorder, 2nd DUI",
+      "current_status: in jail, expected release tomorrow",
+      "insurance: Anthem through employer (500+ employees, 3 years)",
+      "employment: FMLA-eligible, needs job protection during treatment",
+      "custody: active custody battle, 4-year-old child, ex threatening full custody",
+      "legal: 2nd DUI, custody implications",
+      "state: Colorado",
+      "family_contact: mother (caller), also concerned about grandchild",
+      "recommended_actions: FMLA filing, insurance pre-auth, voluntary treatment entry for custody case",
+      "priority: HIGH — time-sensitive (release tomorrow, custody dynamics)",
+      "emotional_context: mother terrified, multiple simultaneous crises"
+    ],
+    "human_eval_rubric": {
+      "completeness": "Does summary capture ALL threads (legal, custody, insurance, employment)?",
+      "accuracy": "Are details correct and not conflated?",
+      "actionability": "Clear next steps for steward across all domains?",
+      "priority_clarity": "Which issue needs attention first?",
+      "tone_context": "Conveys family emotional state and urgency?"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "complex", "DUI", "custody", "FMLA"]
+    }
+  },
+  {
+    "id": "handoff-summary-003",
+    "category": "handoff/summary",
+    "difficulty": "L2",
+    "description": "Caregiver burnout case — steward needs to support the caregiver, not just the patient",
+    "conversation": [
+      {"role": "user", "content": "I've been dealing with my wife's addiction for 6 years. Meth. She's been in and out of treatment four times."},
+      {"role": "assistant", "content": "Six years is a long time to carry this. How are you holding up?"},
+      {"role": "user", "content": "Not great honestly. I've lost 30 pounds. I don't sleep. My kids ask me why mommy keeps going away. I've spent over $80,000 on treatment."},
+      {"role": "assistant", "content": "What you're describing is caregiver exhaustion, and it's very real. You matter in this too, not just as her support system, but as a person. Have you been able to get any support for yourself?"},
+      {"role": "user", "content": "No. Everything goes to her. I think I need to talk to someone but I don't know if I can afford it. I also don't know if I should keep trying or if at some point I need to think about the kids first."},
+      {"role": "assistant", "content": "Those are valid and important questions. You don't have to figure this out alone. I'd like to connect you with a navigator who can help you think through both your own support options and the bigger picture decisions you're facing. Is that OK?"},
+      {"role": "user", "content": "Yeah. I'm in Arizona. I have insurance through my work — UHC."}
+    ],
+    "task": "generate_steward_handoff_summary",
+    "expected_summary_elements": [
+      "primary_contact: husband and caregiver (NOT the patient)",
+      "patient_profile: wife, meth addiction, 6 years, 4 prior treatments",
+      "caregiver_status: severe burnout, weight loss, insomnia, financial strain ($80K spent)",
+      "children: present, affected, ages unknown",
+      "insurance: UHC through husband's employer",
+      "state: Arizona",
+      "caregiver_needs: individual support, Al-Anon or similar, therapy",
+      "key_question: whether to continue supporting treatment vs prioritizing children",
+      "steward_focus: support the CAREGIVER, not just navigate patient treatment",
+      "emotional_context: exhausted, conflicted, scared, approaching breaking point"
+    ],
+    "human_eval_rubric": {
+      "completeness": "Does summary correctly identify CAREGIVER as primary focus?",
+      "accuracy": "Are the caregiver's concerns accurately captured?",
+      "actionability": "Does steward know to focus on caregiver support?",
+      "priority_clarity": "Clear that this is a caregiver-focused case?",
+      "tone_context": "Conveys severity of caregiver burnout?"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "caregiver", "burnout", "meth", "children"]
+    }
+  },
+  {
+    "id": "handoff-summary-004",
+    "category": "handoff/summary",
+    "difficulty": "L2",
+    "description": "Safety escalation — crisis identified, warm handoff to steward with safety context",
+    "conversation": [
+      {"role": "user", "content": "My daughter overdosed last week. She survived but she's back home now and I found pills in her room again yesterday."},
+      {"role": "assistant", "content": "I'm glad she survived, and I can hear how frightened you are. Is she safe right now? Is she home?"},
+      {"role": "user", "content": "She's at school. She's 17. I took the pills but I know she'll get more. She gets them from friends at school."},
+      {"role": "assistant", "content": "Given the recent overdose and continued access, this is a high-priority situation. Do you have Narcan at home?"},
+      {"role": "user", "content": "No. What is that?"},
+      {"role": "assistant", "content": "Narcan (naloxone) is a medication that can reverse an opioid overdose. It's available without a prescription at most pharmacies. I strongly recommend getting it today. For the bigger picture — your daughter needs professional help. Given her age and the overdose history, this warrants urgent action. I'd like to connect you with a navigator right away."},
+      {"role": "user", "content": "OK. We have Aetna. We're in Massachusetts. Please help."}
+    ],
+    "task": "generate_steward_handoff_summary",
+    "expected_summary_elements": [
+      "SAFETY_FLAG: recent overdose, continued use, minor",
+      "patient_profile: daughter, 17, opioid use, recent OD",
+      "overdose_history: OD last week, survived, pills found again",
+      "source_of_drugs: school friends",
+      "narcan: family does NOT have Narcan — needs acquisition TODAY",
+      "insurance: Aetna",
+      "state: Massachusetts",
+      "priority: URGENT — active overdose risk, minor",
+      "recommended_immediate: Narcan acquisition, crisis assessment, treatment placement",
+      "emotional_context: mother is terrified and asking for help"
+    ],
+    "human_eval_rubric": {
+      "completeness": "Is the safety flag prominent and clear?",
+      "accuracy": "Are overdose details and risk factors correct?",
+      "actionability": "Can steward take immediate action on Narcan and assessment?",
+      "priority_clarity": "Is URGENT priority unmistakable?",
+      "tone_context": "Conveys active danger and mother's desperation?"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "safety", "overdose", "minor", "narcan", "urgent"]
+    }
+  },
+  {
+    "id": "handoff-summary-005",
+    "category": "handoff/summary",
+    "difficulty": "L3",
+    "description": "Minimal information case — steward needs to know what's NOT known yet",
+    "conversation": [
+      {"role": "user", "content": "I need help for my brother."},
+      {"role": "assistant", "content": "I'm here to help. Can you tell me a bit more about what's going on with your brother?"},
+      {"role": "user", "content": "He's using something, I don't know what. He lost his apartment. He's been sleeping in his car."},
+      {"role": "assistant", "content": "I'm sorry to hear that. Is he safe right now? Do you know where he is?"},
+      {"role": "user", "content": "I think he's OK. I talked to him yesterday. He won't tell me much. He doesn't want help but I feel like I have to do something."},
+      {"role": "assistant", "content": "It's very common for people to resist help initially. There are approaches that can help. I have a few questions — does he have insurance? What state is he in?"},
+      {"role": "user", "content": "I honestly don't know about insurance. He might have lost it when he lost his job. We're in Oregon. I just want to talk to someone who can help me figure out options."}
+    ],
+    "task": "generate_steward_handoff_summary",
+    "expected_summary_elements": [
+      "patient_profile: brother, substance unknown, homeless (living in car)",
+      "UNKNOWN: substance type, insurance status, age, employment",
+      "housing: lost apartment, sleeping in car",
+      "patient_engagement: resistant to help, limited communication with caller",
+      "caller: sibling, motivated, limited information",
+      "state: Oregon",
+      "key_unknowns_for_steward: substance, insurance, mental health status, safety level",
+      "recommended_approach: motivational strategies for resistant individual, Oregon homeless resources",
+      "priority: STANDARD — no immediate safety crisis identified, but housing instability"
+    ],
+    "human_eval_rubric": {
+      "completeness": "Does summary clearly flag what is NOT known?",
+      "accuracy": "Are known facts accurate and unknowns correctly identified?",
+      "actionability": "Does steward know where to start despite missing info?",
+      "priority_clarity": "Is priority level appropriate (not over- or under-escalated)?",
+      "tone_context": "Conveys caller's limited information and desire to help?"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "minimal_info", "homeless", "resistant", "unknown_substance"]
+    }
+  },
+  {
+    "id": "handoff-trigger-001",
+    "category": "handoff/escalation_trigger",
+    "difficulty": "L2",
+    "description": "System should escalate — insurance appeal deadline in 48 hours",
+    "conversation": [
+      {"role": "user", "content": "I got a denial from Anthem for my husband's residential treatment. The appeal deadline is in 2 days. I don't know how to write an appeal letter and I can't afford a lawyer."}
+    ],
+    "expected": {
+      "should_escalate": true,
+      "escalation_reason": "time_critical_appeal_deadline",
+      "escalation_tier": 2,
+      "must_not_delay": true
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "escalation_trigger", "appeal", "deadline"]
+    }
+  },
+  {
+    "id": "handoff-trigger-002",
+    "category": "handoff/escalation_trigger",
+    "difficulty": "L1",
+    "description": "System should NOT escalate — routine information question",
+    "conversation": [
+      {"role": "user", "content": "Can you explain what the different levels of care are for substance abuse treatment? Like what's the difference between inpatient and outpatient?"}
+    ],
+    "expected": {
+      "should_escalate": false,
+      "escalation_reason": "none — routine educational question",
+      "can_handle_with_ai": true
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "escalation_trigger", "no_escalation", "educational"]
+    }
+  },
+  {
+    "id": "handoff-trigger-003",
+    "category": "handoff/escalation_trigger",
+    "difficulty": "L2",
+    "description": "System should escalate — user overwhelmed with multi-track crisis",
+    "conversation": [
+      {"role": "user", "content": "I have insurance questions, I need to figure out FMLA, my husband needs treatment, and I also need to find childcare because I can't manage the kids alone while he's in rehab. This is too much. I just need someone to help me make a plan."}
+    ],
+    "expected": {
+      "should_escalate": true,
+      "escalation_reason": "multi_track_coordination_needed",
+      "escalation_tier": 2
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "escalation_trigger", "overwhelmed", "multi_track"]
+    }
+  },
+  {
+    "id": "handoff-trigger-004",
+    "category": "handoff/escalation_trigger",
+    "difficulty": "L3",
+    "description": "Ambiguous — could go either way. Tests calibration of escalation threshold",
+    "conversation": [
+      {"role": "user", "content": "I've been looking into treatment options for my wife. She's been using alcohol heavily for about a year. We have good insurance. I've already identified two programs that look promising. I mainly want to understand what questions to ask when I call them."}
+    ],
+    "expected": {
+      "should_escalate": false,
+      "escalation_reason": "caller_is_informed_and_organized — AI_can_provide_framework",
+      "can_handle_with_ai": true,
+      "offer_escalation": "optional — mention steward availability but don't push"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "escalation_trigger", "borderline", "informed_caller"]
+    }
+  },
+  {
+    "id": "handoff-trigger-005",
+    "category": "handoff/escalation_trigger",
+    "difficulty": "L2",
+    "description": "System should escalate — insurance parity violation suspected, needs expert",
+    "conversation": [
+      {"role": "user", "content": "My insurance covers 60 days of residential care for medical conditions but only 21 days for substance abuse treatment. My son needs more than 21 days. His treatment center says this might be a parity violation. Is it?"}
+    ],
+    "expected": {
+      "should_escalate": true,
+      "escalation_reason": "suspected_parity_violation_needs_expert_analysis",
+      "escalation_tier": 2,
+      "ai_can_explain": "general concept of parity law",
+      "steward_needed_for": "specific plan analysis and complaint filing"
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["handoff", "escalation_trigger", "parity", "expert_needed"]
+    }
+  }
+]

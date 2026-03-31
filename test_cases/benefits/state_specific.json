@@ -1,0 +1,477 @@
+[
+  {
+    "id": "state-fmla-ca-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "CA",
+    "description": "California-specific FMLA + CFRA + SDI interaction",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm in California. My husband just entered rehab. Can I take time off work to support him? We have 50+ employees. I've been there 3 years."
+      }
+    ],
+    "expected": {
+      "must_mention": ["FMLA", "CFRA", "CA SDI/PFL"],
+      "key_facts": [
+        "FMLA and CFRA both apply (50+ employees, 1+ year tenure)",
+        "Up to 12 weeks job-protected leave",
+        "CA Paid Family Leave provides partial wage replacement",
+        "Can use PFL concurrently with FMLA/CFRA"
+      ],
+      "must_not_say": [
+        "FMLA doesn't cover substance abuse treatment",
+        "You need to have worked 1250 hours (without checking)"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "california", "CFRA", "PFL", "SDI", "fmla"]
+    }
+  },
+  {
+    "id": "state-fmla-ny-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "NY",
+    "description": "New York Paid Family Leave + state protections",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm in New York. My son needs treatment for heroin addiction. I work at a company with about 40 employees — I know that's under FMLA limits. Does New York have anything that could help me take time off?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["NY Paid Family Leave", "NY State Disability Insurance"],
+      "key_facts": [
+        "NY Paid Family Leave applies to employers of ALL sizes (no 50-employee minimum)",
+        "Up to 12 weeks at 67% of average weekly wage (capped)",
+        "Covers care for family member with serious health condition",
+        "NY PFL is job-protected — employer must reinstate",
+        "Separate from FMLA — can provide protection where FMLA doesn't apply"
+      ],
+      "must_not_say": [
+        "With only 40 employees you have no protections",
+        "Only FMLA provides job protection"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "new_york", "PFL", "small_employer"]
+    }
+  },
+  {
+    "id": "state-fmla-nj-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "NJ",
+    "description": "New Jersey Family Leave Act + TDI + FLI",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in New Jersey. My wife just entered a 90-day residential program. I need time off to manage the kids and visit her. My employer has about 35 employees. What are my options?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["NJ Family Leave Act", "NJ Family Leave Insurance", "NJ TDI"],
+      "key_facts": [
+        "NJ Family Leave Act applies to employers with 30+ employees (lower than FMLA's 50)",
+        "NJ Family Leave Insurance provides up to 12 weeks partial wage replacement",
+        "Up to 85% of average weekly wage (capped)",
+        "Covers care for family member with serious health condition",
+        "NJ has some of the strongest state leave protections"
+      ],
+      "must_not_say": [
+        "35 employees means no leave protections",
+        "Only federal FMLA applies"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "new_jersey", "NJFLA", "FLI", "TDI"]
+    }
+  },
+  {
+    "id": "state-leave-tx-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "TX",
+    "description": "Texas — no state leave program, explore alternatives",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm in Texas. My husband is going into treatment for alcohol addiction. I work at a small business with 20 employees. My boss says there's no requirement to give me time off. Is he right?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["no state FMLA equivalent in Texas", "alternatives"],
+      "key_facts": [
+        "Texas has no state family leave or paid leave law",
+        "Federal FMLA requires 50+ employees — 20 employees doesn't qualify",
+        "Boss may be technically correct about legal requirements",
+        "Alternatives: negotiate personal leave, ADA accommodation if applicable, EAP",
+        "Some Texas cities have local ordinances — check municipal rules"
+      ],
+      "must_not_say": [
+        "Texas has state leave protections",
+        "There's nothing you can do"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "texas", "no_state_leave", "small_employer", "alternatives"]
+    }
+  },
+  {
+    "id": "state-leave-fl-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "FL",
+    "description": "Florida — Marchman Act and limited state protections",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in Florida. My adult son is addicted to fentanyl and won't go to treatment voluntarily. Someone mentioned a 'Marchman Act.' Also, are there any Florida-specific benefits or programs that could help us?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Marchman Act", "Florida"],
+      "key_facts": [
+        "Marchman Act allows court-ordered substance abuse assessment and treatment in Florida",
+        "Can be initiated by family member, spouse, or guardian",
+        "Process: file petition with county court, hearing, possible involuntary treatment",
+        "Florida has no state paid leave or disability program",
+        "Florida's DCF manages substance abuse services — state-funded treatment available",
+        "Managing entities in each region coordinate access to state-funded treatment"
+      ],
+      "must_not_say": [
+        "You can't force an adult into treatment",
+        "Florida has SDI/paid leave"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "florida", "marchman_act", "involuntary", "DCF"]
+    }
+  },
+  {
+    "id": "state-leave-wa-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "WA",
+    "description": "Washington Paid Family & Medical Leave",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I live in Washington state. My daughter needs residential treatment. I want to take time off to support her but I can't afford unpaid leave. Does Washington have any paid leave?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["WA Paid Family and Medical Leave", "PFML"],
+      "key_facts": [
+        "Washington PFML provides up to 12 weeks paid leave",
+        "Up to 90% of weekly wage for lower earners",
+        "Nearly all workers are eligible after 820+ hours worked",
+        "Covers caring for family member with serious health condition",
+        "Job protection included for qualifying employers",
+        "Applied through Employment Security Department (ESD)"
+      ],
+      "must_not_say": [
+        "Washington has no paid leave",
+        "Only unpaid FMLA is available"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "washington", "PFML", "paid_leave"]
+    }
+  },
+  {
+    "id": "state-leave-ma-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "MA",
+    "description": "Massachusetts PFML + Section 35 involuntary commitment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in Massachusetts. My brother is in a bad way with cocaine and alcohol. He won't get help. I've also missed a lot of work dealing with this. Does Massachusetts have any options — either for getting him help or for protecting my job?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["MA PFML", "Section 35"],
+      "key_facts": [
+        "Massachusetts PFML provides up to 12 weeks family leave with pay",
+        "Up to 80% of average weekly wage",
+        "Section 35 allows court-ordered commitment for substance use disorder",
+        "Family member can petition the court under Section 35",
+        "Section 35 is for assessment/stabilization — typically 30-90 days"
+      ],
+      "must_not_say": [
+        "You can't force your brother into treatment",
+        "Massachusetts has no paid leave"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "massachusetts", "PFML", "Section_35", "involuntary"]
+    }
+  },
+  {
+    "id": "state-leave-il-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "IL",
+    "description": "Illinois-specific protections and programs",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm in Illinois. My teenage son needs treatment for opioid use. I work at a midsized company. What Illinois-specific protections or programs should I know about?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Illinois", "state-specific protections"],
+      "key_facts": [
+        "Illinois has no broad state paid family leave (as of 2024)",
+        "Illinois Paid Leave for All Workers Act (2024) provides 40 hours for any reason",
+        "Illinois DCFS has youth substance abuse services",
+        "Illinois Helpline (1-833-2-FIND-HELP) connects to treatment resources",
+        "Medicaid expansion in IL provides comprehensive SUD coverage",
+        "Check employer-specific policies — many IL employers exceed minimums"
+      ],
+      "must_not_say": [
+        "Illinois has comprehensive paid family leave like California",
+        "There are no Illinois-specific resources"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "illinois", "youth", "opioid", "DCFS"]
+    }
+  },
+  {
+    "id": "state-leave-co-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "CO",
+    "description": "Colorado FAMLI Act + state behavioral health resources",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My wife entered treatment here in Colorado. I need to take some time off to manage things at home — we have two young kids. Is there any paid leave in Colorado? I work for a company with about 15 employees."
+      }
+    ],
+    "expected": {
+      "must_mention": ["Colorado FAMLI", "FAMLI Act"],
+      "key_facts": [
+        "Colorado FAMLI Act provides up to 12 weeks paid family/medical leave",
+        "Up to 90% of wages for lower earners, declining percentage for higher earners",
+        "Applies to employers of ALL sizes",
+        "Covers caring for family member with serious health condition",
+        "Small employer (under 10) employees are covered but employer doesn't pay into fund",
+        "File through Colorado FAMLI division"
+      ],
+      "must_not_say": [
+        "15 employees is too small for any leave protection",
+        "Colorado doesn't have paid leave"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "colorado", "FAMLI", "paid_leave", "small_employer"]
+    }
+  },
+  {
+    "id": "state-leave-or-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "OR",
+    "description": "Oregon Paid Leave + state treatment resources",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I live in Oregon. My adult daughter has been battling methamphetamine addiction. She's agreed to go to treatment. I want to take leave from work to help her get settled. What does Oregon offer?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Oregon Paid Leave", "Paid Leave Oregon"],
+      "key_facts": [
+        "Paid Leave Oregon provides up to 12 weeks paid leave",
+        "Up to 100% of wages for lower earners, declining for higher",
+        "Covers care for family member with serious health condition",
+        "Nearly all Oregon workers are eligible",
+        "Measure 110 expanded treatment access — more state-funded options",
+        "Oregon Health Authority has SUD treatment directory"
+      ],
+      "must_not_say": [
+        "Oregon doesn't have paid leave",
+        "You'll have to use FMLA unpaid only"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "oregon", "paid_leave", "methamphetamine", "Measure_110"]
+    }
+  },
+  {
+    "id": "state-parity-ca-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L3",
+    "state": "CA",
+    "description": "California SB 855 enhanced parity protections",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in California and our insurance is denying my son's residential treatment for alcoholism. They say he can do outpatient. His therapist disagrees and says he needs residential based on ASAM criteria. Our plan is a state-regulated plan (not employer-sponsored). Are there any California-specific laws that could help?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["SB 855", "California parity", "ASAM criteria"],
+      "key_facts": [
+        "California SB 855 (2021) strengthened mental health and SUD parity protections",
+        "Requires insurers to use recognized clinical guidelines (like ASAM) for medical necessity",
+        "Insurers cannot use their own internal criteria that are stricter than ASAM",
+        "SB 855 applies to state-regulated plans (individual and small group)",
+        "Treating provider's clinical assessment carries significant weight",
+        "DMHC complaint process available for California state-regulated plans"
+      ],
+      "must_not_say": [
+        "Insurance can define medical necessity however they want",
+        "Federal parity law is the only protection"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "california", "SB_855", "parity", "ASAM", "medical_necessity"]
+    }
+  },
+  {
+    "id": "state-medicaid-expansion-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "TX",
+    "description": "Non-expansion Medicaid state — limited options for adults",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My brother is 32, single, no kids. He makes about $15,000 a year doing odd jobs. He has no insurance. We're in Texas. Can he get Medicaid to cover rehab?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Medicaid", "Texas", "expansion"],
+      "key_facts": [
+        "Texas did not expand Medicaid under the ACA",
+        "Childless adults generally don't qualify for Texas Medicaid regardless of income",
+        "This creates a 'coverage gap' — too much for Medicaid, not enough for ACA subsidies",
+        "Alternatives: state-funded treatment programs through HHSC",
+        "SAMHSA treatment locator for federally-funded programs",
+        "Community health centers offer sliding-scale services",
+        "Some facilities offer scholarships or grant-funded beds"
+      ],
+      "must_not_say": [
+        "He qualifies for Medicaid at that income",
+        "All states cover adults through Medicaid expansion"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "texas", "medicaid", "no_expansion", "coverage_gap", "uninsured"]
+    }
+  },
+  {
+    "id": "state-involuntary-vary-001",
+    "category": "benefits/state_specific",
+    "difficulty": "L3",
+    "state": "multi",
+    "description": "Involuntary commitment laws vary by state — user asking about options in multiple states",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My daughter lives in Texas but I'm in Florida. She's using heroin daily and won't get help. I've been reading about involuntary commitment. Can I use the Marchman Act from Florida to get her committed in Texas? Or does Texas have its own version?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Marchman Act", "Texas commitment laws"],
+      "key_facts": [
+        "Marchman Act is Florida-specific — cannot be applied to someone in Texas",
+        "Involuntary commitment laws are state-specific",
+        "Texas does have involuntary commitment for substance use (Chapter 462 Health & Safety Code)",
+        "Texas requires petition in the county where the person resides",
+        "Each state has different criteria, processes, and durations",
+        "The person must be in the state where you file"
+      ],
+      "must_not_say": [
+        "You can use Florida's Marchman Act for anyone",
+        "There's no way to get an adult committed in Texas"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "multi_state", "involuntary", "marchman_act", "texas", "florida"]
+    }
+  },
+  {
+    "id": "state-benefits-nj-002",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "NJ",
+    "description": "New Jersey — accessing state-funded treatment programs",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son lost his job and insurance in New Jersey. He needs treatment for opioid addiction. We can't pay out of pocket. Does New Jersey have any state-funded treatment options? He's 28."
+      }
+    ],
+    "expected": {
+      "must_mention": ["NJ DMHAS", "state-funded treatment", "NJ FamilyCare/Medicaid"],
+      "key_facts": [
+        "NJ expanded Medicaid — single adults at 138% FPL likely eligible",
+        "NJ Division of Mental Health and Addiction Services (DMHAS) funds treatment",
+        "Call NJ Connect for Recovery helpline: 1-844-276-2777",
+        "State-funded beds available through county intake offices",
+        "Medication-assisted treatment (MAT) widely available through Medicaid",
+        "Can apply for NJ FamilyCare (Medicaid) while seeking treatment"
+      ],
+      "must_not_say": [
+        "He's out of luck without insurance",
+        "There are no free options in New Jersey"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "new_jersey", "DMHAS", "medicaid", "state_funded", "opioid"]
+    }
+  },
+  {
+    "id": "state-benefits-ca-002",
+    "category": "benefits/state_specific",
+    "difficulty": "L2",
+    "state": "CA",
+    "description": "California Drug Medi-Cal and county behavioral health",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We're in Los Angeles. My sister has Medi-Cal. She needs residential treatment for methamphetamine addiction. Someone told me Medi-Cal won't cover residential. Is that true?"
+      }
+    ],
+    "expected": {
+      "must_mention": ["Drug Medi-Cal", "Drug Medi-Cal Organized Delivery System"],
+      "key_facts": [
+        "Drug Medi-Cal does cover residential treatment in California",
+        "Drug Medi-Cal Organized Delivery System (DMC-ODS) expanded coverage in many counties",
+        "LA County participates in DMC-ODS — residential coverage available",
+        "Access through LA County Department of Mental Health or Substance Abuse Prevention and Control",
+        "Call the LA County SAPC helpline for referral",
+        "May need authorization through county — not directly through Medi-Cal managed care plan"
+      ],
+      "must_not_say": [
+        "Medi-Cal doesn't cover residential treatment",
+        "Only private insurance covers residential"
+      ]
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["state_specific", "california", "medi_cal", "drug_medi_cal", "DMC_ODS", "los_angeles", "residential"]
+    }
+  }
+]

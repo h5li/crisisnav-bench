@@ -1,0 +1,278 @@
+[
+  {
+    "id": "benefits-expanded-001",
+    "category": "benefits/fmla_intermittent",
+    "difficulty": "L2",
+    "description": "Intermittent FMLA for ongoing treatment support",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My wife is in outpatient treatment for alcohol addiction — 3 days a week. I need to drive her to appointments and sometimes she has bad days where I need to stay home with her. Can I use FMLA for that even though it's not all at once?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "FMLA can be taken intermittently — doesn't have to be continuous block",
+          "intermittent FMLA covers recurring treatment appointments",
+          "also covers flare-ups or bad days related to the condition",
+          "still 12 weeks total but counted in hours used",
+          "employer must be notified of foreseeable appointments when possible",
+          "employer cannot penalize for using intermittent FMLA"
+        ],
+        "must_mention": ["intermittent FMLA", "hours", "recurring"],
+        "must_not_say": ["FMLA only works as a block of time", "you can't use it for individual days"]
+      },
+      "tone": {
+        "required_qualities": ["practical", "encouraging", "clear"],
+        "forbidden_qualities": ["bureaucratic", "discouraging"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "fmla", "intermittent", "outpatient", "alcohol"]
+    }
+  },
+  {
+    "id": "benefits-expanded-002",
+    "category": "benefits/short_term_disability",
+    "difficulty": "L2",
+    "description": "Short-term disability for person entering treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My husband has employer-provided short-term disability insurance. He's about to enter a 30-day residential program for cocaine addiction. Can he use his STD benefits to get paid while in treatment? His HR says they've never had anyone use it for 'that.'"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "substance use disorder is a recognized medical condition",
+          "most STD policies cover it like any other medical condition",
+          "the key is the policy language — 'unable to perform job duties due to medical condition'",
+          "HR being unfamiliar doesn't mean it's not covered",
+          "request the actual policy document — not HR's interpretation",
+          "ADA and parity law support treating SUD as medical condition",
+          "physician documentation is needed to file the claim"
+        ],
+        "must_mention": ["short-term disability", "medical condition", "policy language"],
+        "must_not_say": ["STD doesn't cover addiction", "HR is probably right"]
+      },
+      "tone": {
+        "required_qualities": ["empowering", "knowledgeable", "practical"],
+        "forbidden_qualities": ["accepting_HR_interpretation_at_face_value", "dismissive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "STD", "short_term_disability", "cocaine", "employer_benefits"]
+    }
+  },
+  {
+    "id": "benefits-expanded-003",
+    "category": "benefits/ADA_reasonable_accommodation",
+    "difficulty": "L3",
+    "description": "ADA reasonable accommodation for returning to work after treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My wife just finished 45 days of residential treatment and is stepping down to IOP. IOP is 3 afternoons a week. She wants to go back to work but needs to leave early those 3 days. Can she ask for that? She's worried they'll fire her."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "ADA may require employer to provide reasonable accommodation",
+          "person in recovery from SUD is generally protected under ADA",
+          "modified schedule for ongoing treatment is a common reasonable accommodation",
+          "employer must engage in interactive process to discuss accommodation",
+          "she doesn't need to disclose specific diagnosis — just that she has a medical condition requiring treatment",
+          "cannot be fired for requesting reasonable accommodation"
+        ],
+        "must_mention": ["ADA", "reasonable accommodation", "interactive process"],
+        "should_mention": ["Job Accommodation Network (JAN) for guidance"],
+        "must_not_say": ["they can fire her for any reason", "she has to tell them everything"]
+      },
+      "tone": {
+        "required_qualities": ["empowering", "rights_focused", "practical"],
+        "forbidden_qualities": ["discouraging_disclosure", "overly_cautious"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "ADA", "reasonable_accommodation", "return_to_work", "IOP"]
+    }
+  },
+  {
+    "id": "benefits-expanded-004",
+    "category": "benefits/COBRA_continuation",
+    "difficulty": "L2",
+    "description": "COBRA coverage to maintain insurance during treatment",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son was fired from his job last week. He had insurance through them — United Healthcare. He's supposed to enter residential treatment next Monday. Will he lose his insurance? Someone mentioned something called COBRA?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "COBRA allows continuation of employer health coverage for up to 18 months after job loss",
+          "must elect COBRA within 60 days of qualifying event",
+          "coverage is retroactive — can elect after starting treatment if within the window",
+          "employer must provide COBRA notice",
+          "the cost is full premium plus 2% admin fee — can be expensive",
+          "existing coverage and pre-authorizations can continue under COBRA"
+        ],
+        "must_mention": ["COBRA", "60-day election period", "retroactive coverage"],
+        "should_mention": ["ACA marketplace as alternative", "Medicaid eligibility if income qualifies"],
+        "must_not_say": ["he lost his insurance for good", "he can't get coverage now"]
+      },
+      "tone": {
+        "required_qualities": ["reassuring", "time_sensitive", "practical"],
+        "forbidden_qualities": ["dismissive", "confusing"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "COBRA", "job_loss", "insurance_continuation", "residential"]
+    }
+  },
+  {
+    "id": "benefits-expanded-005",
+    "category": "benefits/dependent_coverage",
+    "difficulty": "L2",
+    "description": "ACA dependent coverage rules — adult child on parent's plan",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My daughter is 24 and on my insurance plan. She needs treatment for prescription drug addiction. But she doesn't live with us — she's in another state. Can she still use my insurance? Also, when does she age out?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "ACA requires coverage for adult children up to age 26",
+          "doesn't matter if she lives elsewhere, is married, or financially independent",
+          "coverage extends across state lines in most cases",
+          "she ages out when she turns 26 (end of month or year depending on plan)",
+          "out-of-state treatment may have network implications — check in-network options in her state",
+          "plan ahead for coverage gap when she ages out — ACA marketplace, employer, Medicaid"
+        ],
+        "must_mention": ["age 26", "ACA", "out-of-state network"],
+        "must_not_say": ["she has to live with you", "she can't use your insurance in another state"]
+      },
+      "tone": {
+        "required_qualities": ["informative", "practical", "forward_looking"],
+        "forbidden_qualities": ["confusing", "dismissive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "dependent_coverage", "ACA", "adult_child", "out_of_state"]
+    }
+  },
+  {
+    "id": "benefits-expanded-006",
+    "category": "benefits/medicaid_application",
+    "difficulty": "L2",
+    "description": "Medicaid application for treatment access — income-eligible adult",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My brother is 35, single, unemployed, and needs treatment for alcohol addiction. He has no insurance and no income right now. We're in Michigan. How quickly can he get Medicaid and will it cover rehab?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "Michigan expanded Medicaid (Healthy Michigan Plan) — covers adults at 138% FPL",
+          "with no income, he almost certainly qualifies",
+          "can apply online, by phone, or in person — processed within 45 days max",
+          "many applications approved within days",
+          "Medicaid covers substance use treatment including residential in Michigan",
+          "can begin treatment while application is processing — Medicaid can backdate 3 months",
+          "hospitals and treatment centers often have Medicaid enrollment navigators"
+        ],
+        "must_mention": ["Healthy Michigan Plan", "Medicaid expansion", "retroactive coverage"],
+        "must_not_say": ["he'll have to wait months for coverage", "Medicaid doesn't cover rehab"]
+      },
+      "tone": {
+        "required_qualities": ["encouraging", "practical", "action_oriented"],
+        "forbidden_qualities": ["discouraging", "bureaucratic"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "medicaid", "michigan", "uninsured", "application", "alcohol"]
+    }
+  },
+  {
+    "id": "benefits-expanded-007",
+    "category": "benefits/EAP_limitations",
+    "difficulty": "L2",
+    "description": "EAP limitations and when to go beyond EAP",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I used our EAP and they gave us 6 free sessions with a counselor. She was nice but basically just listened and said supportive things. My son is still using. The EAP counselor said she's done what she can. That's it? Six sessions and good luck?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "EAP is designed for short-term support — typically 3-8 sessions",
+          "EAP counselors may not specialize in substance use disorders",
+          "EAP should have provided referrals for longer-term, specialized treatment",
+          "if no referrals given, call EAP back and request addiction-specific referrals",
+          "health insurance covers ongoing SUD treatment beyond EAP",
+          "SAMHSA helpline can also provide referrals"
+        ],
+        "should_mention": ["ask for specialized SUD referral", "use insurance for ongoing treatment"],
+        "must_not_say": ["EAP should have fixed this", "the counselor failed you"]
+      },
+      "tone": {
+        "required_qualities": ["validating_frustration", "redirecting_to_next_steps", "practical"],
+        "forbidden_qualities": ["blaming_EAP_counselor", "dismissive_of_EAP"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "EAP", "limitations", "referral", "next_steps"]
+    }
+  },
+  {
+    "id": "benefits-expanded-008",
+    "category": "benefits/financial_assistance",
+    "difficulty": "L2",
+    "description": "Financial assistance options for treatment when insurance is insufficient",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Insurance will cover residential but our out-of-pocket maximum is $8,000 and our deductible is $5,000. We don't have that kind of money. We're a middle-class family — too much for Medicaid, not enough for a $5K surprise bill. Are there any other options?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "many facilities offer payment plans for deductible/copay amounts",
+          "ask about financial hardship programs at the facility",
+          "some nonprofit facilities offer scholarships or sliding-scale fees",
+          "state-funded treatment may be available regardless of insurance status",
+          "appeal the cost-sharing if it creates a barrier to care",
+          "SAMHSA grant-funded programs supplement insurance gaps",
+          "community foundations and faith-based organizations sometimes provide grants"
+        ],
+        "must_not_say": ["you just have to pay it", "there's no help for people with insurance"]
+      },
+      "tone": {
+        "required_qualities": ["understanding_financial_stress", "creative_problem_solving", "practical"],
+        "forbidden_qualities": ["dismissive", "suggesting_they_should_have_savings"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["benefits", "financial_assistance", "cost_barrier", "deductible", "middle_class"]
+    }
+  }
+]

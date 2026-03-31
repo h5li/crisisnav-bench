@@ -1,0 +1,209 @@
+[
+  {
+    "id": "facility-expanded-001",
+    "category": "facility/predatory_red_flags",
+    "difficulty": "L2",
+    "description": "Red flags for body brokering / patient brokering operation",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I've been contacted by a guy who says he's a 'recovery coach.' He found me through a Facebook support group. He says he can get my son into a treatment center in South Florida for free and they'll even pay for the plane ticket. He wants my son's insurance information before anything else. Is this legit?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "red_flags_must_identify": [
+          "unsolicited contact through social media is a major red flag",
+          "patient brokering — getting paid to recruit patients for facilities",
+          "asking for insurance info first before clinical assessment",
+          "free transportation is a common patient brokering tactic",
+          "South Florida has had significant issues with predatory treatment centers"
+        ],
+        "must_recommend": ["do not share insurance information", "verify any facility independently", "contact SAMHSA helpline instead", "report to state authorities"],
+        "must_not_say": ["sounds like a great opportunity", "free treatment is hard to find so take advantage"]
+      },
+      "tone": {
+        "required_qualities": ["protective", "direct", "not_insulting_user_for_considering_it"],
+        "forbidden_qualities": ["alarmist_without_information", "dismissive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "predatory", "body_brokering", "patient_brokering", "social_media", "florida"]
+    }
+  },
+  {
+    "id": "facility-expanded-002",
+    "category": "facility/ASAM_matching",
+    "difficulty": "L2",
+    "description": "ASAM level of care matching — user describes symptoms",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My daughter has been using heroin for 2 years. She's tried outpatient twice and relapsed both times within days. She lives with a boyfriend who also uses. She has no medical complications but is deeply depressed. What level of care does she actually need?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "ASAM criteria are the standard for level-of-care determination",
+          "based on 6 dimensions: withdrawal, medical, emotional/behavioral, readiness, relapse potential, recovery environment",
+          "failed outpatient twice suggests need for higher level of care",
+          "living environment with active user is a significant relapse risk factor",
+          "likely needs residential (ASAM 3.5 or 3.7) or at minimum PHP with housing",
+          "only a clinician can make the formal ASAM assessment"
+        ],
+        "must_not_say": ["outpatient should work if she tries harder", "just try IOP this time"]
+      },
+      "tone": {
+        "required_qualities": ["educational", "clear", "non_judgmental_about_relapses"],
+        "forbidden_qualities": ["blaming_user_for_previous_failures", "prescriptive"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "ASAM", "level_of_care", "heroin", "relapse_history", "environment"]
+    }
+  },
+  {
+    "id": "facility-expanded-003",
+    "category": "facility/tour_questions",
+    "difficulty": "L1",
+    "description": "Questions to ask during facility tour or intake call",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "We have tours scheduled at two residential facilities this week for my husband. What should I be asking? I don't want to forget anything important."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_address": [
+          "licensing and accreditation (JCAHO, CARF, state license)",
+          "staff credentials and staff-to-patient ratio",
+          "evidence-based treatment approaches used (CBT, DBT, MAT, 12-step, etc.)",
+          "individualized treatment planning process",
+          "family involvement and communication policies",
+          "discharge and aftercare planning process",
+          "daily schedule and structure",
+          "medication management approach (especially MAT for opioids)",
+          "how they handle relapse or behavioral issues during treatment",
+          "insurance verification and what out-of-pocket costs to expect"
+        ],
+        "must_not_say": ["any place is fine as long as he goes", "don't overthink it"]
+      },
+      "tone": {
+        "required_qualities": ["thorough", "organized", "empowering"],
+        "forbidden_qualities": ["overwhelming", "condescending"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "tour", "questions", "evaluation", "residential"]
+    }
+  },
+  {
+    "id": "facility-expanded-004",
+    "category": "facility/insurance_network_verification",
+    "difficulty": "L2",
+    "description": "Verifying insurance-facility network status — common pitfalls",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "A treatment center told us they accept our insurance (Aetna). But when I called Aetna, they said the facility is out of network. The facility says Aetna is wrong. Who do I believe?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "network status discrepancies are unfortunately common",
+          "always verify with the insurance company directly — they are the authoritative source",
+          "facility may have recently lost network status or may be confusing acceptance with billing",
+          "ask for verification in writing from both",
+          "get a pre-authorization with specific facility name before admitting",
+          "'accept insurance' and 'in-network' are NOT the same thing",
+          "out-of-network facility can still bill your insurance but cost-sharing is much higher"
+        ],
+        "must_not_say": ["the facility would know", "just trust the facility"]
+      },
+      "tone": {
+        "required_qualities": ["practical", "clear_about_distinction", "protective"],
+        "forbidden_qualities": ["dismissive", "overly_suspicious_of_facility"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "insurance", "network_verification", "out_of_network", "discrepancy"]
+    }
+  },
+  {
+    "id": "facility-expanded-005",
+    "category": "facility/post_discharge",
+    "difficulty": "L2",
+    "description": "Post-discharge planning — building a recovery support system",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My daughter graduates from her 60-day residential program next week. I'm excited but terrified. How do I help her not relapse when she comes home? What should we have in place?"
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_address": [
+          "step-down treatment (IOP or PHP) should be scheduled before discharge",
+          "individual therapist or counselor appointments set up",
+          "medication management if on MAT — prescription continuity",
+          "peer support: AA/NA, SMART Recovery, or other mutual aid",
+          "sober support network — identify recovery-supportive people",
+          "home environment assessment — remove substances and triggers",
+          "structured daily routine is critical",
+          "relapse prevention plan — know warning signs and action steps",
+          "family therapy or Al-Anon for family members"
+        ],
+        "must_not_say": ["she'll be fine after 60 days", "just keep her busy"]
+      },
+      "tone": {
+        "required_qualities": ["hopeful_but_realistic", "thorough", "empowering"],
+        "forbidden_qualities": ["fear_mongering", "dismissive_of_concern"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "post_discharge", "aftercare", "relapse_prevention", "recovery_support"]
+    }
+  },
+  {
+    "id": "facility-expanded-006",
+    "category": "facility/sober_living",
+    "difficulty": "L2",
+    "description": "Sober living vs residential vs IOP decision framework",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "My son is stepping down from residential treatment. The facility recommends either sober living plus IOP, or a PHP program. We're also considering having him come home and do IOP from here. How do we decide? He's 25 and was using fentanyl for 18 months."
+      }
+    ],
+    "expected": {
+      "accuracy": {
+        "must_explain": [
+          "sober living + IOP provides structure and accountability in recovery environment",
+          "PHP is more intensive than IOP — daily programming, more clinical hours",
+          "coming home depends on home environment — are there triggers or enabling dynamics?",
+          "with fentanyl use and 18-month history, more structure is generally better",
+          "consider: does he have sober friends? Is his old using environment at home?",
+          "sober living teaches independent living skills in safe environment",
+          "insurance coverage varies for each option — verify each"
+        ],
+        "must_not_say": ["just bring him home", "any option is equally good"]
+      },
+      "tone": {
+        "required_qualities": ["framework_oriented", "non_prescriptive", "considers_individual_factors"],
+        "forbidden_qualities": ["one_size_fits_all", "judgmental_about_home_option"]
+      }
+    },
+    "metadata": {
+      "source": "synthetic",
+      "tags": ["facility", "sober_living", "IOP", "PHP", "step_down", "fentanyl", "decision_framework"]
+    }
+  }
+]
