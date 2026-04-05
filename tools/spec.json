@@ -1,0 +1,76 @@
+{
+  "tools": [
+    {
+      "name": "assess_lethality_risk",
+      "description": "Assess lethality risk based on danger indicators. Returns risk level and recommended actions.",
+      "parameters": {
+        "firearms_access": {"type": "boolean", "description": "Partner has access to firearms"},
+        "prior_strangulation": {"type": "boolean", "description": "History of strangulation/choking"},
+        "death_threats": {"type": "boolean", "description": "Partner has made death threats"},
+        "violence_escalating": {"type": "boolean", "description": "Violence has been increasing in frequency/severity"},
+        "stalking_behavior": {"type": "boolean", "description": "Partner exhibits stalking behavior"},
+        "substance_abuse": {"type": "boolean", "description": "Partner has substance abuse issues"},
+        "recent_separation": {"type": "boolean", "description": "Recent or pending separation"}
+      },
+      "returns": {
+        "risk_level": "extreme|high|moderate|low",
+        "score": "0-20 (Danger Assessment scale)",
+        "recommended_actions": ["list of actions"]
+      }
+    },
+    {
+      "name": "search_shelters",
+      "description": "Search for available domestic violence shelters by location.",
+      "parameters": {
+        "zip_code": {"type": "string"},
+        "num_adults": {"type": "integer"},
+        "num_children": {"type": "integer"},
+        "pets": {"type": "boolean"},
+        "accessibility_needs": {"type": "string", "optional": true},
+        "language": {"type": "string", "optional": true}
+      },
+      "returns": {
+        "shelters": [{"name": "string", "phone": "string", "availability": "available|waitlist|full", "accepts_children": "boolean", "accepts_pets": "boolean", "languages": ["list"], "distance_miles": "number"}]
+      }
+    },
+    {
+      "name": "create_safety_plan",
+      "description": "Generate a personalized safety plan based on user's situation.",
+      "parameters": {
+        "living_with_abuser": {"type": "boolean"},
+        "has_children": {"type": "boolean"},
+        "has_transportation": {"type": "boolean"},
+        "has_independent_finances": {"type": "boolean"},
+        "has_support_network": {"type": "boolean"},
+        "technology_monitored": {"type": "boolean"}
+      },
+      "returns": {
+        "safety_plan": {"immediate_steps": ["list"], "preparation_steps": ["list"], "emergency_contacts": ["list"], "safe_locations": ["list"], "important_documents": ["list"], "technology_safety": ["list"]}
+      }
+    },
+    {
+      "name": "find_legal_aid",
+      "description": "Find legal aid resources for protection orders and legal assistance.",
+      "parameters": {
+        "zip_code": {"type": "string"},
+        "issue_type": {"type": "string", "enum": ["protection_order", "custody", "immigration", "divorce", "housing"]},
+        "language": {"type": "string", "optional": true}
+      },
+      "returns": {
+        "resources": [{"name": "string", "phone": "string", "services": ["list"], "free": "boolean", "languages": ["list"]}]
+      }
+    },
+    {
+      "name": "get_hotline",
+      "description": "Get crisis hotline information for the user's specific situation.",
+      "parameters": {
+        "crisis_type": {"type": "string", "enum": ["domestic_violence", "sexual_assault", "suicide", "trafficking", "child_abuse"]},
+        "language": {"type": "string", "optional": true},
+        "communication_preference": {"type": "string", "enum": ["phone", "text", "chat"], "optional": true}
+      },
+      "returns": {
+        "hotline": {"name": "string", "phone": "string", "text": "string", "chat_url": "string", "hours": "string", "languages": ["list"]}
+      }
+    }
+  ]
+}
